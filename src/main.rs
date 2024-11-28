@@ -7,21 +7,24 @@ struct Dollar {
     amount: i32,
 }
 
-fn times(multiplier: i32, dollar: &Dollar) -> Dollar {
-    Dollar {
-        amount: dollar.amount * multiplier,
+impl Dollar {
+    fn times(&self, multiplier: i32) -> Dollar {
+        Dollar {
+            amount: self.amount * multiplier,
+        }
     }
 }
 
+// テストコード
 #[cfg(test)]
 mod money_test {
     use super::*;
     #[test]
     fn test_multiplication() {
         let five = Dollar { amount: 50 };
-        let result1 = times(2, &five);
+        let result1 = five.times(2);
         assert_eq!(100, result1.amount);
-        let result2 = times(3, &five);
+        let result2 = five.times(3);
         assert_eq!(150, result2.amount);
     }
 
