@@ -1,0 +1,6 @@
+[package]
+name = "graduate-school-rust-tdd"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
