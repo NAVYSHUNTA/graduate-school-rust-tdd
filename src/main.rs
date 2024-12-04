@@ -21,10 +21,10 @@ mod money_test {
     use super::*;
     #[test]
     fn test_multiplication() {
-        let five = Dollar { amount: 50 };
-        let result1 = five.times(2);
+        let fifty = Dollar { amount: 50 };
+        let result1 = fifty.times(2);
         assert_eq!(100, result1.amount);
-        let result2 = five.times(3);
+        let result2 = fifty.times(3);
         assert_eq!(150, result2.amount);
     }
 
